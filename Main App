@@ -1,0 +1,32 @@
+import UIKit
+
+class ViewController: UIViewController {
+    
+    let waterLevelLabel = UILabel()
+    let plantNeedsLabel = UILabel()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .white
+        
+        waterLevelLabel.text = "Water level: 80%"
+        waterLevelLabel.font = UIFont.systemFont(ofSize: 24)
+        
+        plantNeedsLabel.text = "Plant needs: Sunlight, fertilizer"
+        plantNeedsLabel.font = UIFont.systemFont(ofSize: 24)
+        
+        view.addSubview(waterLevelLabel)
+        view.addSubview(plantNeedsLabel)
+        
+        waterLevelLabel.translatesAutoresizingMaskIntoConstraints = false
+        waterLevelLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        waterLevelLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50).isActive = true
+        
+        plantNeedsLabel.translatesAutoresizingMaskIntoConstraints = false
+        plantNeedsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        plantNeedsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 50).isActive = true
+    }
+
+}
